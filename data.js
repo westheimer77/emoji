@@ -1,5 +1,5 @@
 
-export let data = [
+export const data = [
   {
     title: '100',
     symbol: '💯',
