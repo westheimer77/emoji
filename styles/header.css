@@ -1,5 +1,38 @@
 .emoji__header{
     height: 295px;
     background: linear-gradient(92deg, #087990 0.12%, #055160 100%);
-    
+    position: relative;
+
 }
+
+.emoji__heading{
+    padding-top: 68px;
+    text-align: center;
+}
+
+.emoji__title{
+    color: var(--Cyan-100, #CFF4FC);
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.emoji__subtitle{
+    color: var(--Cyan-100, #CFF4FC);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 171.429% */
+}
+
+.emoji__input{
+    width: 820px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid var(--Stroke-Input, #CED4DA);
+    background: var(---Gray-White, #FFF);
+    margin-top: 68px;
+    transform: translate(82px, 5px);
+}
+
