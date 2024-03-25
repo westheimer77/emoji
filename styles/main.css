@@ -46,3 +46,25 @@
     line-height: normal;
     margin-top: 12px;
 }
+
+@media screen and (max-width: 1050px) {
+    .emoji__content{
+        display: grid;
+        grid-template-columns: repeat(2, 316px);
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .emoji__content{
+        display: grid;
+        grid-template-columns: repeat(1, 316px);
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .emoji__article{
+        max-width: 300px;
+    }
+}

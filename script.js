@@ -1,8 +1,21 @@
 import { data } from "./data.js";
-let content = document.querySelector('.emoji__content')
-const database = data
-const slicedArray = database.slice(0, 9);
+const content = document.querySelector('.emoji__content');
+const input = document.querySelector('.emoji__input')
+const getUniqKeywords = (arr) =>{
+    const arrCopy = [];
+    arr.forEach((i) => {
+        arrCopy.push({
+            ...i,
+            keywords: [...new Set(i.keywords.split(' '))].join(' ')
+        })
+    })
+    return arrCopy
+}
+
+const database = getUniqKeywords(data)
+
 const render = (arr) =>{
+    content.innerHTML = ""
     arr.forEach((e) => {
         const article = document.createElement('article')
         article.className = "emoji__article"
@@ -16,4 +29,15 @@ const render = (arr) =>{
 
 }
 
-render(slicedArray)
+render(database)
+
+
+function inputHandler () {
+    const value = input.value;
+    console.log(value);
+    const filterArr = database.filter((e) => e.title.toLowerCase().includes(value.toLowerCase()) || e.keywords.toLowerCase().includes(value.toLowerCase()))
+    render(filterArr)
+}
+
+
+input.addEventListener('input', inputHandler)
