@@ -1,0 +1,16 @@
+.emoji__line{
+    height: 1px;
+    background: var(--Stroke-Input, #CED4DA);
+    margin-top: 50px;
+}
+
+.emoji__footerText{
+    color: #6C757D;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 131.25% */
+    margin-top: 13px;
+    margin-bottom: 13px;
+}

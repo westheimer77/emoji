@@ -34,5 +34,10 @@
     background: var(---Gray-White, #FFF);
     margin-top: 68px;
     transform: translate(82px, 5px);
+    padding: 24px;
+}
+
+.emoji__input:focus{
+    outline: none;
 }
 
