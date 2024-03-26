@@ -35,7 +35,7 @@ render(database)
 function inputHandler () {
     const value = input.value;
     console.log(value);
-    const filterArr = database.filter((e) => e.title.toLowerCase().includes(value.toLowerCase()) || e.keywords.toLowerCase().includes(value.toLowerCase()))
+    const filterArr = database.filter((e) => e.title.toLowerCase().includes(value.toLowerCase().trim()) || e.keywords.toLowerCase().includes(value.toLowerCase().trim()))
     render(filterArr)
 }
 
