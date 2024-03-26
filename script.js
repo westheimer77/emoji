@@ -1,16 +1,13 @@
 import { data } from "./data.js";
 const content = document.querySelector('.emoji__content');
 const input = document.querySelector('.emoji__input')
-const getUniqKeywords = (arr) =>{
-    const arrCopy = [];
-    arr.forEach((i) => {
-        arrCopy.push({
-            ...i,
-            keywords: [...new Set(i.keywords.split(' '))].join(' ')
-        })
-    })
-    return arrCopy
-}
+const getUniqKeywords = (arr) => {
+    return arr.map((i) => ({
+        ...i,
+        keywords: [...new Set(i.keywords.split(' '))].join(' ')
+    }));
+};
+
 
 const database = getUniqKeywords(data)
 
