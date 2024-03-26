@@ -23,7 +23,11 @@
 
 .emoji__smile{
     text-align: center;
-
+    color: var(--Body-Text-Base-Color, #68717A);
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px; /* 100% */
 }
 
 .emoji__titleArticle{
